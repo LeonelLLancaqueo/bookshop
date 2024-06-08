@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,13 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
 import tienda.libros.Libros.models.Autor;
-import tienda.libros.Libros.models.Genero;
+
 import tienda.libros.Libros.models.modelRequest.AutorRequest;
 import tienda.libros.Libros.services.AutorService;
 
 @RestController
 @RequestMapping("/autor")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://127.0.0.1:5500/")
 public class AutorController {
 
 
@@ -53,11 +55,7 @@ public class AutorController {
     }
     @GetMapping("/{id}/generosUsados")
     public ResponseEntity<Object> getGenerosUsadosPorAutor(@PathVariable int id){
-        /* 
-        List<Genero> colGenerosUsados= autorService.getColGenerosUsados(id); 
-        
-        return new ResponseEntity<>(colGenerosUsados, HttpStatus.OK);
-        */
+
         Optional<Autor> response= autorService.getAutorById(id);
         
         if(response.isPresent()){
