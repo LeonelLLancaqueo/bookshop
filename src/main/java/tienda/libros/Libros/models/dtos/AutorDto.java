@@ -1,5 +1,4 @@
-package tienda.libros.Libros.models.modelRequest;
-
+package tienda.libros.Libros.models.dtos;
 
 
 import lombok.AllArgsConstructor;
@@ -11,8 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class GeneroRequest {
+public class AutorDto {
+    
+    int idAutor;
     String nombre;
+    String nacionalidad;
+    String urlImage;
     String descripcion;
-
 }

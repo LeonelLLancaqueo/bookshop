@@ -1,13 +1,12 @@
 package tienda.libros.Libros.models.modelRequest;
 
-import java.util.List;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tienda.libros.Libros.models.Libro;
+
 
 
 
@@ -20,10 +19,9 @@ public class AutorRequest {
 
     String nombre;
     String nacionalidad;
-    List<Libro> colLibro;
+    String urlImage;
+    String descripcion;    
 
 
-    public boolean tieneColLibro(){
-        return colLibro != null;
-    }
+
 }

@@ -19,7 +19,12 @@ public class LibroRequest {
     String nombre;
     Genero genero;
     Autor autor;
-
+    String url;
+    String descripcion;
+    double precio;
+    int unidadesEnTotal;
+    int unidadesDisponibles;
+    int unidadesVendidas;
 
     public boolean tieneGenero(){
         return this.genero != null;   

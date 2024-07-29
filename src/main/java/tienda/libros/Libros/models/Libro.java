@@ -1,6 +1,7 @@
 package tienda.libros.Libros.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 import jakarta.persistence.Entity;
@@ -27,14 +28,26 @@ public class Libro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int idLibro;
     String nombre;
-    @ManyToOne(fetch = FetchType.EAGER)
+    
+
+    //@JsonBackReference(value = "libro-genero")
+     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idGenero")
-    @JsonBackReference
+    
     Genero genero;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @JsonBackReference(value = "libro-autor")
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idAutor")
-    @JsonBackReference
+    
     Autor autor;
+
+    String url;
+    String descripcion;
+    double precio;
+    int unidadesEnTotal;
+    int unidadesDisponibles;
+    int unidadesVendidas;
 
 }

@@ -2,7 +2,7 @@ package tienda.libros.Libros.models;
 
 import java.util.List;
 
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 import jakarta.persistence.Entity;
@@ -28,9 +28,11 @@ public class Genero {
     int idGenero;
     String nombre;
     String descripcion;
-    @OneToMany(fetch = FetchType.EAGER)
+
+    //@JsonManagedReference(value = "libro-genero")
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name= "idGenero")
-    
     List<Libro> colLibro;
 
 

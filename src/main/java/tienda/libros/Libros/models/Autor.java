@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -29,8 +31,11 @@ public class Autor {
 
     String nombre;
     String nacionalidad;
+    String urlImage;
+    String descripcion;
     
-    @OneToMany(fetch = FetchType.EAGER)
+    @JsonManagedReference(value = "libro-autor")
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name= "idAutor")
     
     List<Libro> colLibro;
@@ -49,5 +54,12 @@ public class Autor {
 
         return colGenerosUsados;
     }
+
+    public boolean addLibro(Libro libro){
+        return colLibro.add(libro);
+    }
+
+    
+    
 
 }

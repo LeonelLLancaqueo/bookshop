@@ -1,11 +1,13 @@
 package tienda.libros.Libros.controllers;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,11 +19,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tienda.libros.Libros.models.Genero;
+import tienda.libros.Libros.models.dtos.GeneroDto;
 import tienda.libros.Libros.models.modelRequest.GeneroRequest;
 import tienda.libros.Libros.services.GeneroService;
 
 @RestController
 @RequestMapping("/genero")
+@CrossOrigin(origins = "http://127.0.0.1:5500/")
 public class GeneroController {
 
     @Autowired
@@ -84,6 +88,24 @@ public class GeneroController {
         
     }
 
-    
+    //OTROS
+
+    @PostMapping("/conNombre")
+    public ResponseEntity<Object> getGeneroByName(@RequestBody Map<String, String> request){
+
+
+        Optional<GeneroDto> optionalGeneroDto= generoService.getGeneroDtoByName(request.get("name"));
+
+        if(optionalGeneroDto.isPresent()){
+            return new ResponseEntity<>(optionalGeneroDto.get(), HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>("No se encontro un genero con el nombre ingresado", HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/idAndName")
+    public ResponseEntity<List<Map<String, String>>> getIdAndName(){
+        return new ResponseEntity<>(generoService.getIdAndName(), HttpStatus.OK);
+    }    
 
 }

@@ -1,6 +1,7 @@
 package tienda.libros.Libros.controllers;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.Object;
 
 import lombok.AllArgsConstructor;
 import tienda.libros.Libros.models.Autor;
-
+import tienda.libros.Libros.models.Libro;
+import tienda.libros.Libros.models.dtos.AutorDto;
 import tienda.libros.Libros.models.modelRequest.AutorRequest;
+
 import tienda.libros.Libros.services.AutorService;
 
 @RestController
@@ -37,9 +41,11 @@ public class AutorController {
 
 
     @GetMapping
-    public ResponseEntity<List<Autor>> getAll(){
-        return  ResponseEntity.ok(autorService.getAll());
+    public ResponseEntity<List<AutorDto>> getAll(){
+
+        return  ResponseEntity.ok(autorService.getAllConvertedToDto());
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> getAutorById(@PathVariable int id){
@@ -111,5 +117,38 @@ public class AutorController {
 
     } 
 
-    
+
+
+    //otras  consultas 
+
+    @GetMapping("/{id}/colLibros")
+    public ResponseEntity<Object> getColLibros(@PathVariable int id){
+
+        List<Libro> response= autorService.getLibrosAutor(id);
+        
+        if(response != null){
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+
+        return  new ResponseEntity<>("No existe un autor con el id " + id, HttpStatus.NOT_FOUND);
+        
+        
+    }
+
+    @GetMapping("/porNacionalidad/{nacionalidad}")
+    public ResponseEntity<Object> getPorNacionalidad(@PathVariable String nacionalidad){
+
+        List<AutorDto> response= autorService.getPorNacionalidad(nacionalidad);
+            
+        return new ResponseEntity<>(response, HttpStatus.OK);        
+    }
+
+    @GetMapping("/idAndName")
+    public ResponseEntity<Object> getIdAndName(){
+
+        List<Map<String,String>> response= autorService.getIdAndName();
+            
+        return new ResponseEntity<>(response, HttpStatus.OK);        
+    }
 }
