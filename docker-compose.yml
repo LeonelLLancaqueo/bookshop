@@ -9,10 +9,11 @@ services:
       - 8080:8080
     networks:
       - springapimysql-net
-    environment:
-      - spring.datasource.url=jdbc: mysql://mysqldb:3306/libreria?createDatabaseIfNotExist=true 
-      - spring.datasource.username: leonel
-      - spring.datasource.password: 1234
+    environment:     
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/libreria?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: leonel
+      SPRING_DATASOURCE_PASSWORD: 1234
+      SPRING_DATASOURCE_DB: libreria
     depends_on:
         mysqldb:
            condition: service_healthy
