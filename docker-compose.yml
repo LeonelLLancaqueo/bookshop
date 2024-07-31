@@ -1,5 +1,23 @@
 version: "3.8"
 services:
+  mysqldb:
+    image: mysql
+    restart: always
+    ports:
+      - 3307:3306
+    networks:
+      - springapimysql-net  
+    environment:
+      MYSQL_DATABdocdockASE: libreria
+      MYSQL_USER: leonel
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: 1234
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
+      
   api_service:
     build: 
       dockerfile: Dockerfile
@@ -17,22 +35,5 @@ services:
     depends_on:
         mysqldb:
            condition: service_healthy
-  mysqldb:
-    image: mysql
-    restart: always
-    ports:
-      - 3307:3306
-    networks:
-      - springapimysql-net  
-    environment:
-      MYSQL_DATABASE: libreria
-      MYSQL_USER: leonel
-      MYSQL_PASSWORD: 1234
-      MYSQL_ROOT_PASSWORD: 1234
-
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      timeout: 10s
-      retries: 10
 networks:
   springapimysql-net:
