@@ -44,7 +44,7 @@ public class GeneroTest {
         .andReturn();
 
 
-        JSONArray jsonArray= new JSONArray(result.getResponse().getContentAsString());
+        //JSONArray jsonArray= new JSONArray(result.getResponse().getContentAsString());
         
         //assertEquals(jsonArray.length(), 1);
         
