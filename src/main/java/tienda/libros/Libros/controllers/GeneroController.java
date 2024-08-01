@@ -26,7 +26,7 @@ import tienda.libros.Libros.services.GeneroService;
 
 @RestController
 @RequestMapping("/genero")
-@CrossOrigin(origins = "http://127.0.0.1:5500/")
+@CrossOrigin(origins = {"http://127.0.0.1:5500/", "https://librosstaticweb.onrender.com/"})
 @AllArgsConstructor
 public class GeneroController {
 

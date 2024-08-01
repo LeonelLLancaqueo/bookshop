@@ -31,7 +31,7 @@ import tienda.libros.Libros.services.AutorService;
 @RestController
 @RequestMapping("/autor")
 @AllArgsConstructor
-@CrossOrigin(origins = "http://127.0.0.1:5500/")
+@CrossOrigin(origins = {"http://127.0.0.1:5500/", "https://librosstaticweb.onrender.com/"})
 public class AutorController {
 
 

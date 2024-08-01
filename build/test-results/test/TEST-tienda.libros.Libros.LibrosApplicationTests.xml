@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tienda.libros.Libros.LibrosApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-01T14:28:16" hostname="LeonelComputer" time="0.548">
+<testsuite name="tienda.libros.Libros.LibrosApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-01T16:07:15" hostname="LeonelComputer" time="0.629">
   <properties/>
-  <testcase name="contextLoads()" classname="tienda.libros.Libros.LibrosApplicationTests" time="0.548"/>
-  <system-out><![CDATA[11:27:56.841 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [tienda.libros.Libros.LibrosApplicationTests]: LibrosApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:27:56.925 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration tienda.libros.Libros.LibrosApplication for test class tienda.libros.Libros.LibrosApplicationTests
+  <testcase name="contextLoads()" classname="tienda.libros.Libros.LibrosApplicationTests" time="0.629"/>
+  <system-out><![CDATA[13:06:52.630 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [tienda.libros.Libros.LibrosApplicationTests]: LibrosApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:06:52.758 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration tienda.libros.Libros.LibrosApplication for test class tienda.libros.Libros.LibrosApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,24 +14,24 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-08-01T11:27:57.376-03:00  INFO 159880 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : Starting LibrosApplicationTests using Java 20.0.2 with PID 159880 (started by leonel in /home/leonel/Desktop/programacionWeb/springboot/Libros)
-2024-08-01T11:27:57.378-03:00  INFO 159880 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : No active profile set, falling back to 1 default profile: "default"
-2024-08-01T11:27:58.019-03:00  INFO 159880 --- [Libros] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-01T11:27:58.089-03:00  INFO 159880 --- [Libros] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
-2024-08-01T11:27:58.540-03:00  INFO 159880 --- [Libros] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-01T11:27:58.582-03:00  INFO 159880 --- [Libros] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-01T11:27:58.611-03:00  INFO 159880 --- [Libros] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-01T11:27:58.925-03:00  INFO 159880 --- [Libros] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-01T11:27:58.956-03:00  INFO 159880 --- [Libros] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-01T11:28:03.447-03:00  INFO 159880 --- [Libros] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23ec2bdc
-2024-08-01T11:28:03.450-03:00  INFO 159880 --- [Libros] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-01T11:28:04.323-03:00  WARN 159880 --- [Libros] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-01T11:28:05.609-03:00  INFO 159880 --- [Libros] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-01T11:28:15.328-03:00  INFO 159880 --- [Libros] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01T11:28:15.845-03:00  INFO 159880 --- [Libros] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-01T11:28:16.215-03:00  WARN 159880 --- [Libros] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-01T11:28:16.249-03:00  INFO 159880 --- [Libros] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-08-01T11:28:16.779-03:00  INFO 159880 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : Started LibrosApplicationTests in 19.687 seconds (process running for 20.949)
+2024-08-01T13:06:53.255-03:00  INFO 182491 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : Starting LibrosApplicationTests using Java 20.0.2 with PID 182491 (started by leonel in /home/leonel/Desktop/programacionWeb/springboot/Libros)
+2024-08-01T13:06:53.256-03:00  INFO 182491 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-08-01T13:06:54.245-03:00  INFO 182491 --- [Libros] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-01T13:06:54.331-03:00  INFO 182491 --- [Libros] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+2024-08-01T13:06:55.110-03:00  INFO 182491 --- [Libros] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-01T13:06:55.171-03:00  INFO 182491 --- [Libros] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-01T13:06:55.227-03:00  INFO 182491 --- [Libros] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-01T13:06:55.710-03:00  INFO 182491 --- [Libros] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-01T13:06:55.754-03:00  INFO 182491 --- [Libros] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-01T13:07:00.630-03:00  INFO 182491 --- [Libros] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14dbfdb1
+2024-08-01T13:07:00.634-03:00  INFO 182491 --- [Libros] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-01T13:07:01.118-03:00  WARN 182491 --- [Libros] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-01T13:07:02.343-03:00  INFO 182491 --- [Libros] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-01T13:07:14.144-03:00  INFO 182491 --- [Libros] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-01T13:07:14.601-03:00  INFO 182491 --- [Libros] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-01T13:07:14.891-03:00  WARN 182491 --- [Libros] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-01T13:07:14.924-03:00  INFO 182491 --- [Libros] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-08-01T13:07:15.436-03:00  INFO 182491 --- [Libros] [    Test worker] t.libros.Libros.LibrosApplicationTests   : Started LibrosApplicationTests in 22.524 seconds (process running for 24.221)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
