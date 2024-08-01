@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
 import tienda.libros.Libros.models.Genero;
 import tienda.libros.Libros.models.dtos.GeneroDto;
 import tienda.libros.Libros.models.modelRequest.GeneroRequest;
@@ -26,6 +27,7 @@ import tienda.libros.Libros.services.GeneroService;
 @RestController
 @RequestMapping("/genero")
 @CrossOrigin(origins = "http://127.0.0.1:5500/")
+@AllArgsConstructor
 public class GeneroController {
 
     @Autowired
