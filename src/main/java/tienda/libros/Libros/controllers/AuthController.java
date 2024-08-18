@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/auth")
 @AllArgsConstructor
-@CrossOrigin(origins = {"http://127.0.0.1:5500/", "https://librosstaticweb.onrender.com/"})
+@CrossOrigin(origins = {"http://127.0.0.1:4200/","http://127.0.0.1:5500/", "https://librosstaticweb.onrender.com/", "https://applibros-fontend.web.app/"})
 
 public class AuthController {
     

@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 @RequestMapping("/libro")
 @AllArgsConstructor
-@CrossOrigin(origins = {"http://127.0.0.1:5500/", "https://librosstaticweb.onrender.com/"})
+@CrossOrigin(origins = {"http://localhost:4200/", "http://localhost:5500/", "https://librosstaticweb.onrender.com/", "https://applibros-fontend.web.app/"})
 public class LibroController {
     
     @Autowired
